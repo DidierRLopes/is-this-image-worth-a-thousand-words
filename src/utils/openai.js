@@ -13,11 +13,35 @@ export async function analyzeImage(apiKey, imageDataUrl) {
           content: [
             {
               type: 'text',
-              text: `Describe this image in as much detail as possible. Be extremely thorough and verbose.
+              text: `You are an expert image analyst. Your task is to write the LONGEST, most EXHAUSTIVE description possible of this image. Aim for at least 1000 words. Do not summarize - EXPAND on every detail.
 
-Describe every element you can see: the subjects, objects, colors, textures, lighting, composition, mood, atmosphere, any text visible, the background, foreground, any actions taking place, spatial relationships between objects, artistic style if applicable, and any other details that would help someone who cannot see the image understand it completely.
+Write a comprehensive analysis covering ALL of the following sections in depth:
 
-Do not hold back - the goal is to create the most comprehensive description possible.`,
+1. OVERVIEW: What is the main subject? What type of image is this (photo, painting, illustration, etc.)?
+
+2. FOREGROUND DETAILS: Describe every object, person, or element in the foreground. Include their positions, sizes, colors, textures, materials, conditions, and relationships to each other.
+
+3. MIDDLE GROUND: What occupies the middle portion of the image? Describe all elements with the same level of detail.
+
+4. BACKGROUND: What is visible in the background? Describe the setting, environment, sky, distant objects, etc.
+
+5. PEOPLE/CHARACTERS (if any): Describe each person's appearance, clothing (fabric, style, fit, colors, patterns, accessories), facial expressions, body language, poses, actions, and apparent emotions.
+
+6. COLORS & LIGHTING: What is the color palette? Describe the lighting - its direction, quality (harsh/soft), color temperature, shadows, highlights, and how it affects the mood.
+
+7. TEXTURES & MATERIALS: Identify and describe the textures visible - smooth, rough, glossy, matte, metallic, fabric types, etc.
+
+8. COMPOSITION & FRAMING: How is the image composed? Rule of thirds? Symmetry? Leading lines? What's the focal point?
+
+9. TEXT & SYMBOLS (if any): Transcribe any visible text. Describe any logos, signs, symbols, or written elements.
+
+10. MOOD & ATMOSPHERE: What emotions does this image evoke? What's the overall tone?
+
+11. CONTEXT & INTERPRETATION: What story does this image tell? What might be happening before/after this moment?
+
+12. TECHNICAL ASPECTS: If discernible - camera angle, depth of field, focus, any post-processing effects.
+
+Remember: Be EXHAUSTIVE. Describe EVERYTHING you can see. The goal is to create a description so detailed that someone could recreate the image from your words alone. Do not use bullet points - write in flowing paragraphs.`,
             },
             {
               type: 'image_url',
